@@ -1,0 +1,21 @@
+.main-form {
+  color: $white;
+  background: $blue-text;
+  padding: 50px 30px;
+  width: 100%;
+  max-width: 400px;
+  margin: 15px 0 85px 0;
+
+  img {
+    width: 100px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+  }
+}

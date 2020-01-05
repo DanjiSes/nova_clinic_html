@@ -1,0 +1,394 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Montserrat', sans-serif
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+// .container
+// 	width: 1170px
+// 	margin: auto
+
+.wrapper
+	background-image: url('../img/big-bg.png')
+	background-repeat: no-repeat
+	background-position: right 
+	background-size: 60%
+	height: 100vh
+	background-color: #f2f3f7
+
+
+
+
+.menu
+	padding: 0
+	margin-top: 30px
+	margin-bottom: 30px
+	display: flex
+	text-decoration: none
+	justify-content: flex-end
+	list-style-type: none
+	&-btn
+		margin: 15px 0
+		display: none
+		background-color: #fff
+		padding: 15px
+		color: $color-black
+		position: relative
+		&:hover
+			cursor: pointer
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 50%
+			margin-top: -10px
+			right: 15px
+			width: 15px
+			height: 15px
+			border-right: 2px solid $color-black
+			border-bottom: 2px solid $color-black
+			transform: rotate(45deg)
+
+	&-link
+		margin: 0 8px
+		a
+			color: $accent
+			font-size: 16px
+			font-weight: 500
+			padding: 5px 15px
+			transition: all .2s
+			&:focus
+				text-decoration: none
+			&:hover
+				text-decoration: none
+				color: #fff
+				background-color: #049bf8
+				border-radius: 50px
+
+
+form
+	padding: 50px 35px
+	background-color: $accent
+	width: 480px
+	color: #fff
+	h1
+		font-size: 35px
+		text-transform: uppercase
+		margin-bottom: 0
+	p
+		font-size: 18px
+		margin-top: 10px
+		margin-bottom: 35px
+		line-height: 24px
+	input
+		display: block
+		width: 100%
+		color: #404040
+		text-transform: uppercase
+		padding: 10px 20px
+		margin-bottom: 15px
+		font-size: 16px
+	button
+		background-color: #be282c
+		border: none
+		width: 160px
+		height: 50px
+		font-size: 20px
+
+	h3
+		font-size: 24px
+		text-transform: uppercase
+		margin-bottom: 20px
+		margin-top: 20px
+
+.blocks
+	margin-top: -40px
+	.row > div 
+    	padding: 0
+  
+.block
+	&-item
+		min-width: 100%
+		min-height: 100%
+		background-color: #3c89d1
+		color: #fff
+		padding: 35px
+
+		&__time
+			padding-bottom: 10px
+			border-bottom: 1px solid #fff
+		h3
+			font-size: 28px
+			margin-bottom: 20px
+		a
+			display: block
+			font-size: 24px
+			color: #fff
+			&:hover
+				text-decoration: none
+				color: darken(#fff, 10%)
+		p
+			font-size: 24px
+		img
+			margin-bottom: 25px
+			max-width: 35px
+
+.special-header
+	font-size: 48px
+	font-weight: 700
+	position: relative
+	&:before
+		content: ''
+		display: inline-block
+		width: 100%
+		height: 3px
+		background-color: rgba($color-black, .1)
+		position: absolute
+		bottom: -25px
+	&:after
+		content: ''
+		display: inline-block
+		width: 80px
+		height: 5px
+		position: absolute
+		bottom: -26px
+		left: 0
+		background-color: #b6d6d6
+
+.about
+	padding-bottom: 100px
+	&-numbers
+		> div
+			margin: 0 20px
+		display: flex
+		justify-content: center
+		text-align: center
+	&-header
+		margin-top: 90px
+		margin-bottom: 90px
+	&-desc
+		font-size: 18px
+	&-number
+		font-weight: 700
+		color: $accent
+		font-size: 30px
+		margin: 0
+	&-text
+		color: $color-black
+		margin-top: 20px
+
+
+
+.service
+	padding-top: 60px
+	padding-bottom: 150px
+	background-color: #f4f4f4
+	&-item
+		position: relative
+		margin-top: 70px
+		&:hover
+			.service-item__text
+				background-color: rgba(#2f3843, .7)
+			.service-item__img-overlay
+				opacity: 0
+				cursor: pointer
+
+		&__img
+			width: 100%
+			position: relative
+			&-overlay
+				top: 0
+				width: 100%
+				position: absolute
+				z-index: 5
+				transition: all .2s
+
+		&__wrapper
+			text-align: center
+			width: 100%
+			position: absolute
+			bottom: 0
+		&__text
+			color: #fff
+			transition: all .2s
+			padding: 15px
+			margin-bottom: 0
+			
+	
+.works
+	padding-top: 50px
+	padding-bottom: 150px
+	&-header
+		margin-bottom: 80px
+	&-img 
+		width: 100%
+		margin-bottom: 30px
+.team
+	padding-top: 50px
+	padding-bottom: 100px
+	&-desc
+		font-size: 16px
+	&-img
+		width: 100%
+	&-item
+		text-align: center
+		color: #fff
+	&-name
+		margin-top: 25px
+		font-size: 19px
+		font-weight: 500
+		margin-bottom: 5px
+	&-header
+		color: #fff
+		margin-bottom: 80px
+		font-size: 48px
+		font-weight: 700
+		position: relative
+		&:before
+			content: ''
+			display: inline-block
+			width: 100%
+			height: 3px
+			background-color: #fff
+			position: absolute
+			bottom: -25px
+		&:after
+			content: ''
+			display: inline-block
+			width: 80px
+			height: 5px
+			position: absolute
+			bottom: -26px
+			left: 0
+			background-color: #b6d6d6
+
+.reviews
+	padding-top: 60px
+	padding-bottom: 90px
+	&-header
+		font-size: 36px
+		margin-bottom: 70px
+	&-block
+
+	    &__img
+	    	width: 37px
+	    	height: 33px
+	    &__text
+	    	font-style: italic
+	    	margin-top: 40px
+	    	margin-bottom: 80px
+	    &__name
+	    	font-weight: 700
+
+	&-item 
+		min-width: 100%
+		min-height: 100%
+		color: #fff
+		padding: 35px
+
+
+.reviews-block
+	.row > div
+		padding: 0
+
+
+
+.footer
+	padding: 50px 0
+	background-image: url('../img/footer-bg.png')
+	background-size: cover
+	color: #fff
+	&-header
+		font-size: 36px
+		font-weight: 700
+		margin-bottom: 15px
+	&-text
+		font-size: 22px
+		font-weight: 300
+		margin-bottom: 30px
+	&-button
+		display: inline-block
+		font-size: 24px
+		color: #fff
+		padding: 15px 85px
+		background-color: #3c89d1
+		box-shadow: 0 5px 40px rgba(1, 61, 76, 0.75)
+		&:hover
+			color: #fff
+			text-decoration: none
+	&-phones
+		margin-top: 40px
+		span
+			font-size: 30px
+		a
+			color: #fff
+			font-size: 20px
+			&:hover
+				text-decoration: none
+
+.made
+	background-color: #eaeaea
+	text-align: center 
+	padding: 20px 0
+	&-text
+		margin: 0
+
+
+
+
+
+
+@import "media" // Всегда в конце

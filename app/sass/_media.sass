@@ -1,0 +1,95 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.blocks
+		margin-top: 100px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.menu
+		justify-content: center
+	.wrapper
+		background-size: cover
+	.blocks
+		margin-top: 0
+	.wrapper
+		height: 100%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.menu-btn
+		display: block
+	.menu
+		background-color: #fff
+		display: none
+		flex-direction: column
+		&__active
+				display: block
+
+		&-link
+			padding: 15px 0
+			a 
+				color: $color-black
+				display: block
+	form
+		width: 100%
+	.special-header
+		font-size: 38px
+	.team-header
+		font-size: 38px
+	.about-desc
+		margin-bottom: 50px
+	.team-item
+		margin-bottom: 40px
+	.team-name
+		font-size: 23px
+
+	.reviews
+		padding-bottom: 0
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.about-numbers
+		flex-direction: column
+		div
+			margin-bottom: 30px
+	.timer
+		display: none
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
